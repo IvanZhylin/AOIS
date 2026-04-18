@@ -1,6 +1,6 @@
 """Преобразование IEEE-754 (binary32) и обертки арифметических операций."""
 
-from bits import bits_to_unsigned, int_to_bits_unsigned
+from src.bits import bits_to_unsigned, int_to_bits_unsigned
 
 
 def float_to_ieee754_bits(value: float) -> list[int]:

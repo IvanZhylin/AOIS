@@ -1,11 +1,11 @@
 """Точка входа в программу лабораторной работы 1."""
 
-from cli import run_demo
+from src.cli import run
 
 
 def main() -> None:
     """Запустить демонстрацию всех операций."""
-    run_demo()
+    run()
 
 
 if __name__ == "__main__":

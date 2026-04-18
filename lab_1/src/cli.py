@@ -1,18 +1,20 @@
 """Простой CLI-демо для требований лабораторной работы."""
 
-from arithmetic import add_twos, div_direct, mul_direct, sub_twos
-from bcd5421 import add_5421
-from bits import direct_to_ones, direct_to_twos, int_to_direct_code
-from ieee754 import add_float32, div_float32, mul_float32, sub_float32
+from src.arithmetic import add_twos, div_direct, mul_direct, sub_twos
+from src.bcd5421 import add_5421
+from src.bits import direct_to_ones, direct_to_twos, int_to_direct_code
+from src.ieee754 import add_float32, div_float32, mul_float32, sub_float32
 
 
 def _bits_text(bits: list[int]) -> str:
     return "".join(str(x) for x in bits)
 
 
-def run_demo() -> None:
+def run() -> None:
     """Вывести демонстрацию всех требуемых операций."""
+
     x, y = 13, -5
+    
     direct = int_to_direct_code(y)
     print("1) Десятичное число -> прямой/обратный/дополнительный коды")
     print(f"{y} прямой код:        {_bits_text(direct)}")
@@ -51,5 +53,5 @@ def run_demo() -> None:
 
 
 if __name__ == "__main__":
-    run_demo()
+    run()
 

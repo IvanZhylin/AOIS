@@ -1,6 +1,6 @@
 """Целочисленная арифметика на базе двоичных представлений."""
 
-from bits import (
+from src.bits import (
     WIDTH,
     add_bit_arrays,
     bits_to_unsigned,
