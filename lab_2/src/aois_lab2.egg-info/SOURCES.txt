@@ -1,0 +1,15 @@
+pyproject.toml
+src/aois_lab2.egg-info/PKG-INFO
+src/aois_lab2.egg-info/SOURCES.txt
+src/aois_lab2.egg-info/dependency_links.txt
+src/aois_lab2.egg-info/entry_points.txt
+src/aois_lab2.egg-info/requires.txt
+src/aois_lab2.egg-info/top_level.txt
+src/boolfunc/__init__.py
+src/boolfunc/analysis.py
+src/boolfunc/cli.py
+src/boolfunc/minimization.py
+src/boolfunc/parser.py
+tests/test_analysis.py
+tests/test_minimization.py
+tests/test_parser.py
