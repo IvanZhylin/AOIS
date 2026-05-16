@@ -54,8 +54,8 @@ def run() -> None:
         ("*", mul_float32),
         ("/", div_float32),
     ):
-        bits, value = func(3.5, 1.25)
-        print(f"3.5 {label} 1.25 = {_bits_text(bits)} (bin32) = {value} (десят.)")
+        bits, value = func(15.5, 1.75)
+        print(f" 15.5{label} 15.75 = {_bits_text(bits)} (bin32) = {value} (десят.)")
 
     print("\n7) Сложение в 5421 BCD (вариант c)")
     bcd_bits, bcd_value = add_5421(259, 76)
