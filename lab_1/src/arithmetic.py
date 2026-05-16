@@ -60,27 +60,22 @@ def div_direct(a: int, b: int, precision: int = 5, width: int = WIDTH) -> tuple[
     """Разделить два целых в логике прямого кода с фиксированной точностью."""
     if b == 0:
         raise ZeroDivisionError("Деление на ноль")
-
     sign = -1 if (a < 0) ^ (b < 0) else 1
     dividend = -a if a < 0 else a
     divisor = -b if b < 0 else b
-
     integer_part = dividend // divisor
     remainder = dividend % divisor
-
     frac_digits: list[int] = []
     for _ in range(precision):
         remainder *= 10
         frac_digits.append(remainder // divisor)
         remainder %= divisor
-
     text = str(integer_part) + "." + "".join(str(d) for d in frac_digits)
     value = integer_part
     factor = 0.1
     for digit in frac_digits:
         value += digit * factor
         factor /= 10
-
     if sign < 0:
         return "-" + text, -value
     return text, value
@@ -114,4 +109,3 @@ def binary_to_unsigned(text: str) -> int:
         bits[idx] = 1 if ch == "1" else 0
         idx += 1
     return bits_to_unsigned(bits)
-
