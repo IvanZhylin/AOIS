@@ -1,4 +1,3 @@
-"""Простой CLI-демо для требований лабораторной работы."""
 
 from src.arithmetic import add_twos, div_direct, mul_direct, sub_twos
 from src.bcd5421 import add_5421
@@ -13,10 +12,13 @@ def _bits_text(bits: list[int]) -> str:
 def run() -> None:
     """Вывести демонстрацию всех требуемых операций."""
 
-    x, y = 13, -5
+    x = int(input("Введи первое число: "))
+    y = int(input("Введи второе число: "))
+
+    #x, y = 13, -5
     
     direct = int_to_direct_code(y)
-    print("1) Десятичное число -> прямой/обратный/дополнительный коды")
+    print("\n1) Десятичное число -> прямой/обратный/дополнительный коды")
     print(f"{y} прямой код:        {_bits_text(direct)}")
     print(f"{y} обратный код:      {_bits_text(direct_to_ones(direct))}")
     print(f"{y} дополнительный код:{_bits_text(direct_to_twos(direct))}")
