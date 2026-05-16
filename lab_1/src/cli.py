@@ -17,11 +17,19 @@ def run() -> None:
 
     #x, y = 13, -5
     
-    direct = int_to_direct_code(y)
+    
     print("\n1) Десятичное число -> прямой/обратный/дополнительный коды")
+    direct = int_to_direct_code(y)
+    print(f"Для числа {y}: ")
     print(f"{y} прямой код:        {_bits_text(direct)}")
     print(f"{y} обратный код:      {_bits_text(direct_to_ones(direct))}")
     print(f"{y} дополнительный код:{_bits_text(direct_to_twos(direct))}")
+
+    direct = int_to_direct_code(x)
+    print(f"Для числа {x}: ")
+    print(f"{x} прямой код:        {_bits_text(direct)}")
+    print(f"{x} обратный код:      {_bits_text(direct_to_ones(direct))}")
+    print(f"{x} дополнительный код:{_bits_text(direct_to_twos(direct))}")
 
     print("\n2) Сложение в дополнительном коде")
     add_bits, add_value = add_twos(x, y)
