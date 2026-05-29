@@ -36,13 +36,13 @@
 
 Проект разделен на небольшие модули с явной ответственностью:
 
-- `src/boolfunc/parser.py`  
+- `src/src/parser.py`  
   Парсер выражений (AST + вычисление).
-- `src/boolfunc/analysis.py`  
+- `src/src/analysis.py`  
   Основная бизнес-логика анализа функции.
-- `src/boolfunc/minimization.py`  
+- `src/src/minimization.py`  
   Алгоритм минимизации (Quine–McCluskey) и таблица покрытий.
-- `src/boolfunc/cli.py`  
+- `src/src/cli.py`  
   Консольный интерфейс и печать результатов.
 
 Принципы SOLID соблюдаются за счет:
@@ -79,7 +79,7 @@ python -m venv .venv
 Вариант 1:
 
 ```bash
-.venv/bin/python -m boolfunc.cli
+.venv/bin/python -m src.cli
 ```
 
 Вариант 2 (после установки пакета):
@@ -113,7 +113,7 @@ lab_2/
   pyproject.toml
   README.md
   src/
-    boolfunc/
+    src/
       __init__.py
       parser.py
       analysis.py

@@ -1,2 +1,0 @@
-[console_scripts]
-aois-lab2 = boolfunc.cli:main
