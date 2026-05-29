@@ -36,13 +36,13 @@
 
 Проект разделен на небольшие модули с явной ответственностью:
 
-- `src/src/parser.py`  
+- `src/parser.py`  
   Парсер выражений (AST + вычисление).
-- `src/src/analysis.py`  
+- `src/analysis.py`  
   Основная бизнес-логика анализа функции.
-- `src/src/minimization.py`  
+- `src/minimization.py`  
   Алгоритм минимизации (Quine–McCluskey) и таблица покрытий.
-- `src/src/cli.py`  
+- `src/cli.py`  
   Консольный интерфейс и печать результатов.
 
 Принципы SOLID соблюдаются за счет:
