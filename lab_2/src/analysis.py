@@ -110,8 +110,8 @@ class BooleanFunctionAnalyzer:
         step = 1
         while step < n:
             for i in range(n - step):
-                coeffs[i] ^= coeffs[i + 1]
-            step += 1
+                coeffs[i] ^= coeffs[i + step]
+            step <<= 1   # ← исправление
         terms: list[str] = []
         for idx, coef in enumerate(coeffs):
             if coef == 0:
